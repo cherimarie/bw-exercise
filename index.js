@@ -25,10 +25,12 @@ function createServer(){
 
     const providers = {
         snailgun: {
-            api_key: process.env.SNAILGUN_API_KEY
+            api_key: process.env.SNAILGUN_API_KEY,
+            controller: snailgunEmails
         },
         spendgrid: {
-            api_key: process.env.SPENDGRID_API_KEY
+            api_key: process.env.SPENDGRID_API_KEY,
+            controller: spendgridEmails
         }
     }
 
@@ -42,8 +44,8 @@ function createServer(){
             res.json({status: 'error', errMsg: 'Invalid email paramaters'})
             next()
         }else {
-            res.status = 200
-            res.json({status: 'success', msg: 'hello from email land!'})
+            process.env.email_api_key = providers[process.env.PROVIDER].api_key
+            providers[process.env.PROVIDER].controller.create(req, res)
         }
     })
 
