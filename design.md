@@ -1,5 +1,6 @@
 # Introduction
 
+This project is an API providing an abstraction layer for email sending. It allows for easy switching between external email service providers via a change to environment variables. This switch is invisible to consumers.
 
 ## Problem
 
@@ -8,8 +9,6 @@ The main application often needs to switch which third party mail service it use
 ## Solution
 
 Create an intermediary mail service that abstracts the external tools, allowing main application to always use the same endpoint. The intermediary service can switch which external service it uses with just a simple config change and redeploy.
-
-## Scope
 
 
 ### Design Considerations
@@ -35,7 +34,7 @@ Returns error response if any are missing/incorrect type.
 
 Makes call to selected external service, passing through received paramaters in correct format.
 
-Returns success response as appropriate.
+Returns success or failure response as appropriate.
 
 ## System Overview
 
@@ -45,12 +44,9 @@ Secrets management is via environment variables, using the dotenv library.
 
 HTTP requests with Axios library.
 
-Swagger is used for documentation and data validation.
+Swagger is used for documentation. [TODO]
 
-Unit testing is done with Sinon and Mocha. Jest may be a better choice, as it has mocking built in. We may want to revisit this decision later.
-
-## System Architecture
-
+Unit testing is done with Sinon and Mocha. [TODO] Jest may be a better choice, as it has mocking built in. We may want to revisit this decision later.
 
 
 ## Resources
@@ -61,5 +57,8 @@ https://www.npmjs.com/package/dotenv
 
 With additional time and resources, I would implement the following:
 
--
-
+- Finish snailgun and spendgrid controllers
+- Finish unit tests
+- Documentation and data validation with Swagger
+- Get integration tests working with Supertest
+- Add a linting library for easy code consistency
