@@ -27,6 +27,12 @@ Then, the server can be started with either command:
     $ node index.js
 ```
 
+### Test Calls
+
+curl -X POST -H "Content-Type: application/json" \
+    -d '{"name": "harold", "color": "orange"}' \
+    http://localhost:3000/email
+
 ### Code Quality
 
 <!-- TODO: Linter? -->

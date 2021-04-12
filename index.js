@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const emails = require('./controllers/emails.js')
+const snailgunEmails = require('./controllers/snailgunEmails.js')
+const spendgridEmails = require('./controllers/spendgridEmails.js')
 
 app.post('/email', (req, res) => {
     res.status = 200
