@@ -47,6 +47,8 @@ HTTP requests with Axios library.
 
 Swagger is used for documentation and data validation.
 
+Unit testing is done with Sinon and Mocha. Jest may be a better choice, as it has mocking built in. We may want to revisit this decision later.
+
 ## System Architecture
 
 
@@ -56,4 +58,7 @@ Swagger is used for documentation and data validation.
 
 ## Next Steps
 
+With additional time and resources, I would implement the following:
+
+-
 

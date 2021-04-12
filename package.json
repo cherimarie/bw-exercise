@@ -1,0 +1,28 @@
+{
+  "name": "bw-exercise",
+  "version": "0.0.1",
+  "description": "A sample API for email service abstraction",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cherimarie/bw-exercise.git"
+  },
+  "author": "cheri allen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cherimarie/bw-exercise/issues"
+  },
+  "homepage": "https://github.com/cherimarie/bw-exercise#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.3.2",
+    "sinon": "^10.0.0"
+  }
+}
