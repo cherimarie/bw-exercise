@@ -41,7 +41,7 @@ Returns success response as appropriate.
 
 This project is built with Node, using Express library. Node provides nonblocking concurrency, allowing for heavy traffic. Express is widely used, well documented, and offers some conveniences.
 
-Secrets management is via environment variables.
+Secrets management is via environment variables, using the dotenv library.
 
 HTTP requests with Axios library.
 
@@ -55,6 +55,7 @@ Unit testing is done with Sinon and Mocha. Jest may be a better choice, as it ha
 
 ## Resources
 
+https://www.npmjs.com/package/dotenv
 
 ## Next Steps
 

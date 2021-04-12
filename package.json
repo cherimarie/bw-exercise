@@ -19,7 +19,9 @@
   "homepage": "https://github.com/cherimarie/bw-exercise#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "supertest": "^6.1.3"
   },
   "devDependencies": {
     "mocha": "^8.3.2",

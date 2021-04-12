@@ -14,6 +14,8 @@ This is a Node application, and Node and npm are the only dependencies that must
 
 ### Running the Service Locally
 
+Copy the contents of .env.example to a new file called .env. Git will ignore this file. Replace the values with the correct values for the given APIs. PROVIDER should have value of either "spendgrid" or "snailgun".
+
 Once you have npm installed, install all dependencies.
 
 ```
@@ -30,7 +32,7 @@ Then, the server can be started with either command:
 ### Test Calls
 
 curl -X POST -H "Content-Type: application/json" \
-    -d '{"name": "harold", "color": "orange"}' \
+    -d '{"to": "susan@abcpreschool.org","to_name": "Miss Susan","from": "noreply@mybrightwheel.com","from_name": "brightwheel","subject": "Your Weekly Report","body": "<h1>Weekly Report</h1><p>You saved 10 hours this week!</p>"}' \
     http://localhost:3000/email
 
 ### Code Quality
